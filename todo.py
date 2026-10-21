@@ -13,6 +13,20 @@ def add_task(task):
     print("Задача успешно добавлена!")
 
 
+def clear_tasks():
+    if not tasks:
+        print("Список задач уже пуст!")
+        return
+
+    confirm = input("Удалить все задачи? (да/нет): ")
+
+    if confirm.strip().lower() == "да":
+        tasks.clear()
+        print("Все задачи удалены!")
+    else:
+        print("Удаление отменено!")
+
+
 def show_tasks():
     if not tasks:
         print("Список задач пуст!")
@@ -52,7 +66,8 @@ def main():
         print("2. Показать задачи")
         print("3. Удалить задачу")
         print("4. Выполнить задачу")
-        print("5. Выход")
+        print("5. Очистить все задачи")
+        print("6. Выход")
 
         choice = input("Выберите действие: ")
 
@@ -80,6 +95,9 @@ def main():
                 print("Введите число!")
 
         elif choice == "5":
+            clear_tasks()
+
+        elif choice == "6":
             print("До свидания!")
             break
 
