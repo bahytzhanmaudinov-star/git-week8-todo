@@ -13,6 +13,20 @@ def add_task(task):
     print("Задача успешно добавлена!")
 
 
+def clear_tasks():
+    if not tasks:
+        print("Список задач уже пуст!")
+        return
+
+    confirm = input("Удалить все задачи? (да/нет): ")
+
+    if confirm.lower() == "да":
+        tasks.clear()
+        print("Все задачи удалены!")
+    else:
+        print("Удаление отменено!")
+
+
 def show_tasks():
     if not tasks:
         print("Список задач пуст!")
