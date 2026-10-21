@@ -28,7 +28,7 @@ def show_tasks():
 def delete_task(number):
     if 1 <= number <= len(tasks):
         removed = tasks.pop(number - 1)
-        print(f"Задача '{removed['name']}' удалена!")
+        print(f"Удаление завершено: {removed['name']}")
     else:
         print("Такой задачи не существует!")
 
