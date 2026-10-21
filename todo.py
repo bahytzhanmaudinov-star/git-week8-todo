@@ -20,7 +20,7 @@ def clear_tasks():
 
     confirm = input("Удалить все задачи? (да/нет): ")
 
-    if confirm.lower() == "да":
+    if confirm.strip().lower() == "да":
         tasks.clear()
         print("Все задачи удалены!")
     else:
