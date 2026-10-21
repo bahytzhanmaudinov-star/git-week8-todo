@@ -66,7 +66,8 @@ def main():
         print("2. Показать задачи")
         print("3. Удалить задачу")
         print("4. Выполнить задачу")
-        print("5. Выход")
+        print("5. Очистить все задачи")
+        print("6. Выход")
 
         choice = input("Выберите действие: ")
 
@@ -94,6 +95,9 @@ def main():
                 print("Введите число!")
 
         elif choice == "5":
+            clear_tasks()
+
+        elif choice == "6":
             print("До свидания!")
             break
 
